@@ -1,8 +1,12 @@
 const express = require('express')
 const app = express()
+const cors = require('cors')
+
 
 //reguler middleware
 app.use(express.json())
+app.use(cors())
+
 const morgan = require("morgan")
 app.use(morgan('dev'))
 require('dotenv').config()
